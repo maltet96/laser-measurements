@@ -29,7 +29,7 @@ print('connected')
 #         on_press=on_press) as listener:
 #     listener.join()
 
-for i in range(100):
+for i in range(10000):
     bytesToRead = ser.inWaiting()
     data_raw = ser.read(bytesToRead)
     # data_raw = ser.read(100)
