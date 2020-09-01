@@ -29,16 +29,15 @@ print('connected')
 #         on_press=on_press) as listener:
 #     listener.join()
 
-for i in range(10000000):
+while True:
     # bytesToRead = ser.inWaiting()
     # data_raw = ser.read(bytesToRead)
     # data_raw = ser.read(100)
     data_raw = ser.readline()
-    print(i)
-    # if len(data_raw):
-    print(data_raw)
+
     if len(data_raw):
-        import pdb;pdb.set_trace()
+        print(data_raw)
+
 ser.close()
 
     # time.sleep(0.1)
