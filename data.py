@@ -38,8 +38,8 @@ def plot_data(X: np.ndarray):
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     plt.title('Messung')
-    plt.show()
-    # return fig
+    # plt.show()
+    return fig
 
 def plot_data_with_table(df: pd.DataFrame):#, df_table: pd.DataFrame):
     X = df.to_numpy()
@@ -76,7 +76,7 @@ def plot_data_with_table(df: pd.DataFrame):#, df_table: pd.DataFrame):
 def main(fname: str = 'Beispielwerte aus einer Messung'):
     df = read_data(fname)
     X = df.to_numpy()
-    table_html(X)
+    html, df = table_html(X)
     plot_data(df)
 
 if __name__ == '__main__':
