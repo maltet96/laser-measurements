@@ -7,6 +7,7 @@ ser = serial.Serial('/dev/tty.HC-05-DevB', 2000000, timeout=2, xonxoff=False, rt
 ser.flushInput()
 ser.flushOutput()
 
+print('connected')
 
 def on_press(key):
     global ser
@@ -18,10 +19,10 @@ with Listener(
     listener.join()
 
 while True:
-    bytesToRead = ser.inWaiting()
-    data_raw = ser.read(bytesToRead)
+    # bytesToRead = ser.inWaiting()
+    # data_raw = ser.read(bytesToRead)
 
-    # data_raw = ser.readline()
+    data_raw = ser.readline()
 
     # print(len(data_raw))
     if len(data_raw):
