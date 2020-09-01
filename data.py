@@ -77,7 +77,7 @@ def main(fname: str = 'Beispielwerte aus einer Messung'):
     df = read_data(fname)
     X = df.to_numpy()
     html, df = table_html(X)
-    plot_data(df)
+    # plot_data(df)
 
 if __name__ == '__main__':
     # fire.Fire(main)
