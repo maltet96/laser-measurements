@@ -36,10 +36,11 @@ for i in range(20):
     print(data_bytes)
     print(len(data_bytes))
     # data_raw = ser.read(100)
-    data_raw = ser.readline()
+    # data_raw = ser.readline()
     #
     # if len(data_raw):
     #     print(data_raw)
+    time.slepp(0.5)
 
 ser.close()
 
