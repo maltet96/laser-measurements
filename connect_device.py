@@ -30,14 +30,15 @@ print('connected')
 #     listener.join()
 
 for i in range(20):
+    print(i)
     bytesToRead = ser.inWaiting()
     data_bytes = ser.read(bytesToRead)
     print(data_bytes)
     # data_raw = ser.read(100)
     data_raw = ser.readline()
-
-    if len(data_raw):
-        print(data_raw)
+    #
+    # if len(data_raw):
+    #     print(data_raw)
 
 ser.close()
 
