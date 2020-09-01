@@ -10,7 +10,9 @@ while True:
 
     # data_raw = ser.readline()
 
-    print(len(data_raw))
+    # print(len(data_raw))
+    if len(data_raw):
+        print(data_raw)
 
 # import time
 # import bluetooth
