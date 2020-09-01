@@ -1,4 +1,5 @@
 import serial
+import time
 
 ser = serial.Serial('/dev/tty.HC-05-DevB', 2000000, timeout=2, xonxoff=False, rtscts=False, dsrdtr=False)
 ser.flushInput()
@@ -13,6 +14,8 @@ while True:
     # print(len(data_raw))
     if len(data_raw):
         print(data_raw)
+
+    time.sleep(0.1)
 
 # import time
 # import bluetooth
