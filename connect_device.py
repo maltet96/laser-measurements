@@ -30,10 +30,10 @@ with Listener(
     listener.join()
 
 while True:
-    # bytesToRead = ser.inWaiting()
-    # data_raw = ser.read(bytesToRead)
+    bytesToRead = ser.inWaiting()
+    data_raw = ser.read(bytesToRead)
     # data_raw = ser.read(100)
-    data_raw = ser.readline()
+    # data_raw = ser.readline()
 
     # if len(data_raw):
     print(data_raw)
