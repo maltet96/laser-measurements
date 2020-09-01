@@ -3,7 +3,7 @@ import time
 from pynput.keyboard import Key, Listener
 import sys
 
-ser = serial.Serial('/dev/tty.HC-05-DevB', 9600, timeout=1)#, xonxoff=False, rtscts=False, dsrdtr=False)
+ser = serial.Serial('/dev/tty.HC-05-DevB', 9600, timeout=1, xonxoff=False, rtscts=False, dsrdtr=False)
 # ser.flushInput()
 # ser.flushOutput()
 
@@ -21,8 +21,8 @@ with Listener(
 while True:
     # bytesToRead = ser.inWaiting()
     # data_raw = ser.read(bytesToRead)
-
-    data_raw = ser.readline()
+    data_raw = ser.read(100)
+    # data_raw = ser.readline()
 
     # print(len(data_raw))
     if len(data_raw):
