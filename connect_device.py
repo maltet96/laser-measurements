@@ -20,16 +20,16 @@ ser.flushOutput()
 
 print('connected')
 
-def on_press(key):
-    global ser
-    ser.close()
-    sys.exit()
+# def on_press(key):
+#     global ser
+#     ser.close()
+#     sys.exit()
+#
+# with Listener(
+#         on_press=on_press) as listener:
+#     listener.join()
 
-with Listener(
-        on_press=on_press) as listener:
-    listener.join()
-
-while True:
+for i in range(100):
     bytesToRead = ser.inWaiting()
     data_raw = ser.read(bytesToRead)
     # data_raw = ser.read(100)
@@ -37,6 +37,7 @@ while True:
 
     # if len(data_raw):
     print(data_raw)
+ser.close()
 
     # time.sleep(0.1)
 
