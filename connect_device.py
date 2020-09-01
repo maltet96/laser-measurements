@@ -4,8 +4,8 @@ from pynput.keyboard import Key, Listener
 import sys
 
 ser = serial.Serial('/dev/tty.HC-05-DevB', 9600, timeout=1)#, xonxoff=False, rtscts=False, dsrdtr=False)
-ser.flushInput()
-ser.flushOutput()
+# ser.flushInput()
+# ser.flushOutput()
 
 print('connected')
 
