@@ -1,9 +1,21 @@
 import serial
 import time
+from pynput.keyboard import Key, Listener
+import sys
 
 ser = serial.Serial('/dev/tty.HC-05-DevB', 2000000, timeout=2, xonxoff=False, rtscts=False, dsrdtr=False)
 ser.flushInput()
 ser.flushOutput()
+
+
+def on_press(key):
+    global ser
+    ser.close()
+    sys.exit()
+
+with Listener(
+        on_press=on_press) as listener:
+    listener.join()
 
 while True:
     bytesToRead = ser.inWaiting()
