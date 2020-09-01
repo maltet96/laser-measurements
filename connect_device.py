@@ -34,6 +34,7 @@ for i in range(20):
     bytesToRead = ser.inWaiting()
     data_bytes = ser.read(bytesToRead)
     print(data_bytes)
+    print(len(data_bytes))
     # data_raw = ser.read(100)
     data_raw = ser.readline()
     #
