@@ -40,7 +40,7 @@ for i in range(20):
     #
     # if len(data_raw):
     #     print(data_raw)
-    time.slepp(0.5)
+    time.sleep(0.5)
 
 ser.close()
 
