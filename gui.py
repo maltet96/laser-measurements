@@ -53,7 +53,7 @@ def index():
     global read, export, selected_option, measurements_dict
 
     if request.method == 'POST':
-        elif request.form['button'] == 'Export':
+        if request.form['button'] == 'Export':
             export = True
         elif request.form['button'] == 'Select':
             selected_option = "%s.xlsx" % request.form.get('measurement')
