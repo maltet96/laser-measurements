@@ -4,7 +4,7 @@ import pandas as pd
 # import fire
 
 def read_data(fname: str):
-    df = pd.read_excel(f"{fname}.xlsx", index_col=0, header=0, skiprows=[0])
+    df = pd.read_excel(f"{fname}", index_col=0, header=0, skiprows=[0])
     return df
 
 def process_data(df: pd.DataFrame, factor: int = 100):
@@ -16,7 +16,7 @@ def process_data(df: pd.DataFrame, factor: int = 100):
     return df_group.transform(lambda x: factor * x)
 
 def table_html(X: np.ndarray):
-    row_labels = ['min', 'max', r'$\Delta$']
+    row_labels = ['min', 'max', 'Delta']
     col_labels = []
     vals = []
 
@@ -34,7 +34,7 @@ def table_html(X: np.ndarray):
 
 def plot_data(X: np.ndarray):
     fig, ax = plt.subplots(1,1)
-    ax.plot(X[:,0], X[:,1])
+    ax.plot(X[:,0], X[:,1], color='#028C4C')
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     plt.title('Messung')
