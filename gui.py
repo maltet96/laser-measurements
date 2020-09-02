@@ -12,7 +12,7 @@ import time
 # openpyxl
 
 from data import read_data, plot_data, table_html
-from connect_device import SerialPort
+# from connect_device import SerialPort
 
 export = False
 selected_option = None
